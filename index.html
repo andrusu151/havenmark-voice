@@ -30,7 +30,11 @@
       font-family: 'DM Sans', sans-serif;
       background: var(--cream);
       color: var(--text-dark);
-      overflow-x: hidden;
+    }
+
+    /* Prevent horizontal scroll without trapping fixed-position widgets */
+    body > *:not(script) {
+      max-width: 100vw;
     }
 
     /* ── TOP UTILITY BAR ── */
@@ -157,7 +161,7 @@
       position: relative;
       height: 100vh;
       min-height: 600px;
-      overflow: hidden;
+      clip-path: inset(0);
     }
 
     .carousel {
@@ -1068,7 +1072,7 @@
   <!-- Cognigy Click-to-Call Widget -->
   <script src="https://github.com/Cognigy/click-to-call-widget/releases/latest/download/webRTCWidget.js"></script>
   <script>
-  	addEventListener("load", (event) => {if (window.initWebRTCWidget) {window.initWebRTCWidget("https://endpoint-trial.cognigy.ai/c58153e58ebf22d1a40ea2e3813ca8ac8a65f62fd6d0d76795ed35aec56e3b58")}});
+  	addEventListener("load", (event) => {if (window.initWebRTCWidget) {window.initWebRTCWidget("https://endpoint-trial.cognigy.ai/5d8ed45ef8672402d44054fa5c3f8b05d26493b5f386b46f4dcd6c227f1284f7")}});
   </script>
 
   <script>
